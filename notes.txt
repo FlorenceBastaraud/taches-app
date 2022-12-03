@@ -1,0 +1,7 @@
+// A FAIRE 
+
+-> Implémenter les actions
+
+-> Refactoriser le code
+
+-> Amélorier le style / la présentation
