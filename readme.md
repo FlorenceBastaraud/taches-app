@@ -1,4 +1,4 @@
-# Une application de listage de tâches réalisée avec Vanilla JS et LocalStorage | To Do application made with Vanilla JS and LocalStorage
+# Une application de tâche réalisée avec en Javascript avec l'utilisation du LocalStorage | Todo application made with Javascript using LocalStorage
 
 #### By Florence B.
 

@@ -1,6 +1,15 @@
 body {
   background-color: rgb(245, 221, 221);
 }
+
+* {
+  caret-color: transparent;
+}
+
+input, textarea {
+  padding: 10px 20px;
+}
+
 header h1 {
   text-align: center;
   text-transform: uppercase;
@@ -78,6 +87,7 @@ main {
 
 .todo-item .todo-content .todo-state {
   height: 100%;
+  padding: 10px 20px;
 }
 
 .todo-item .todo-content .todo-text {
@@ -85,6 +95,7 @@ main {
   margin: 0 0 0 15px;
   border: none;
   height: fit-content;
+  background-color: transparent;
 }
 
 .todo-item .todo-content .todo-text:focus {
@@ -99,4 +110,5 @@ main {
   display: flex;
   justify-content: space-around;
   width: 20%;
+  padding: 10px 20px;
 }

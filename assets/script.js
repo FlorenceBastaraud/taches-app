@@ -111,11 +111,16 @@ window.addEventListener('load', () => {
               todoEditIcon.classList.remove('fa-pen-to-square');
               todoEditIcon.classList.add('fa-solid');
               todoEditIcon.classList.add('fa-check');
+              todoText.style.backgroundColor = '#fff';
+              todoText.style.caretColor = '#000';
+              todoText.focus();
             } else {
               todoText.setAttribute('readonly', 'readonly');
               todoEditIcon.classList.add('fa-solid');
               todoEditIcon.classList.add('fa-pen-to-square');
               todoEditIcon.classList.remove('fa-check');
+              todoText.style.backgroundColor = 'transparent';
+              todoText.style.caretColor = 'transparent';
 
               const updatedTodo = {
                 id: todo.id,
