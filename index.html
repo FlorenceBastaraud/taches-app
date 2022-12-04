@@ -5,18 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Web: liste de tâches</title>
+    <script src="https://kit.fontawesome.com/058064b705.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/normalize.css">
     <link rel="stylesheet" href="assets/style.css">
   </head>
   <body>
-    <h1 id="titre">Liste de <span>tâches</span></h1>
-    <h3 id="sous-titre">Tape, click, c'est rapide !</h3>
-    <div class="container">
-      <div class="form">
-        <textarea type="text" class="input"></textarea>
-        <input type="submit" class="ajout" value="Ajouter tâche">
+    
+
+    <header>
+      <h1>Tâches</h1>
+    </header>
+
+    <main>
+      <div id="new-todo-section">
+
+        <h2>Qu'as-tu prévu pour aujourd'hui ?</h2>
+        <form id="new-todo-form">
+          <textarea id="new-todo-input" cols="30" rows="4"></textarea>
+          <button id="new-todo-add-button" type="submit">Ajouter tâche</button>
+        </form>
+
       </div>
-      <div class="taches"></div>
-    </div>
+      <div id="todo-list-section">
+        <h3>Liste des tâches :</h3>
+        <div id="todos">
+          
+        </div>
+      </div>
+
+    </main>
+
+
+
     <script src="assets/script.js"></script>
   </body>
 </html>
