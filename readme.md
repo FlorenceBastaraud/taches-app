@@ -1,4 +1,4 @@
-# Une application de tâche réalisée avec en Javascript avec l'utilisation du LocalStorage | Todo application made with Javascript using LocalStorage
+# Une application de tâche réalisée en Javascript avec utilisation du LocalStorage | Todo application made with Javascript using LocalStorage
 
 #### By Florence B.
 
