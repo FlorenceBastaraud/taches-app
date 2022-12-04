@@ -2,7 +2,7 @@ window.addEventListener('load', () => {
   let todos = [];
 
   if(localStorage.getItem('todos')){
-    todos = JSON.parse(localStorage.getItem('todos'))
+    todos = JSON.parse(localStorage.getItem('todos'));
   }
 
   const formTodo = document.getElementById('new-todo-form');
@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
   
   displayTodos(todos);
 
-
+  // Ajout d'une nouvelle tâche
   formTodo.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -45,10 +45,12 @@ window.addEventListener('load', () => {
 
 
 
-
+    // Function d'affichage des tâches + actions
     function displayTodos(insertTodos){
 
       insertTodos.map(todo => {
+
+          const tempIndex = todos.indexOf(todo);
 
           todo = JSON.parse(todo);
           
@@ -99,9 +101,59 @@ window.addEventListener('load', () => {
     
           todoDelete.appendChild(todoDeleteIcon);
       
-          divTodos.appendChild(todoItem)
-      
-      
+          divTodos.appendChild(todoItem);
+
+          // Modif todo
+          todoEditIcon.addEventListener('click', () => {
+
+            if(todoEditIcon.classList.contains('fa-pen-to-square')){
+              todoText.removeAttribute('readonly');
+              todoEditIcon.classList.remove('fa-pen-to-square');
+              todoEditIcon.classList.add('fa-solid');
+              todoEditIcon.classList.add('fa-check');
+            } else {
+              todoText.setAttribute('readonly', 'readonly');
+              todoEditIcon.classList.add('fa-solid');
+              todoEditIcon.classList.add('fa-pen-to-square');
+              todoEditIcon.classList.remove('fa-check');
+
+              const updatedTodo = {
+                id: todo.id,
+                name: todoText.value,
+                state: todo.state
+              }
+
+              todos.splice(tempIndex, 1, JSON.stringify(updatedTodo));
+              localStorage.setItem('todos', JSON.stringify(todos));
+            }
+
+          })
+
+          // Supp todo
+          todoDeleteIcon.addEventListener('click', () => {
+            divTodos.removeChild(todoItem);
+            todos.splice(tempIndex, 1);
+            localStorage.setItem('todos', JSON.stringify(todos));
+          })
+
+
+          // Srocker état du todo
+          todoState.addEventListener('click', (e) => {
+
+            if(todoState.checked){
+              todo.state = true;
+              todos.splice(tempIndex, 1, JSON.stringify(todo));
+              localStorage.setItem('todos', JSON.stringify(todos));
+            } else {
+              todo.state = false;
+              todos.splice(tempIndex, 1, JSON.stringify(todo));
+              localStorage.setItem('todos', JSON.stringify(todos));
+            }
+
+          })
+
+
+          todo.state ? todoState.setAttribute('checked', 'checked') : todoState.removeAttribute('checked');
       
       
         })
