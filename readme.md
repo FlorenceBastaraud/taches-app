@@ -1,4 +1,4 @@
-# Une application de tâche réalisée avec en Javascript | Todo application made with Javascript
+# Une application de tâche réalisée en Javascript | Todo application made with Javascript
 
 - Données persistentes
 - Ajout, modification contenu et état et suppréssion de tâche 
