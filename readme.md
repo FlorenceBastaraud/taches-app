@@ -1,5 +1,8 @@
-# Une application de tâche réalisée avec en Javascript avec l'utilisation du LocalStorage | Todo application made with Javascript using LocalStorage
+# Une application de tâche réalisée avec en Javascript | Todo application made with Javascript
+
+- Données persistentes
+- Ajout, modification contenu et état et suppréssion de tâche 
 
 #### By Florence B.
 
-###### [Utilise l'application en cliquant sur ce lien](https://florencebastaraud.github.io/taches-app/)
+###### [Lien démo](https://florencebastaraud.github.io/taches-app/)

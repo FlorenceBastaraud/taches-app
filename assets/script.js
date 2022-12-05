@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
 
   const formTodo = document.getElementById('new-todo-form');
   const inputTodo = document.getElementById('new-todo-input');
-  const divTodos = document.getElementById('todos'); 
+  const divTodos = document.getElementById('todos');
 
   
   displayTodos(todos);
@@ -39,11 +39,6 @@ window.addEventListener('load', () => {
 
 
   })
-
-
-
-
-
 
     // Function d'affichage des tâches + actions
     function displayTodos(insertTodos){
@@ -139,6 +134,7 @@ window.addEventListener('load', () => {
             divTodos.removeChild(todoItem);
             todos.splice(tempIndex, 1);
             localStorage.setItem('todos', JSON.stringify(todos));
+
           })
 
 
@@ -147,10 +143,12 @@ window.addEventListener('load', () => {
 
             if(todoState.checked){
               todo.state = true;
+              todoContent.style.textDecoration = 'line-through';
               todos.splice(tempIndex, 1, JSON.stringify(todo));
               localStorage.setItem('todos', JSON.stringify(todos));
             } else {
               todo.state = false;
+              todoContent.style.textDecoration = 'none';
               todos.splice(tempIndex, 1, JSON.stringify(todo));
               localStorage.setItem('todos', JSON.stringify(todos));
             }
@@ -159,13 +157,15 @@ window.addEventListener('load', () => {
 
 
           todo.state ? todoState.setAttribute('checked', 'checked') : todoState.removeAttribute('checked');
-      
+
+          
+          todo.state ? todoContent.style.textDecoration = 'line-through' : todoContent.style.textDecoration = 'none';
+          
       
         })
      
     }
 
-    
     
 
 })
