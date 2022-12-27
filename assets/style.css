@@ -156,4 +156,7 @@ main {
     font-size: 1.2em;
     white-space: nowrap;
   }
+  .fa-trash {
+    margin-left: 0.6em;
+  }
 }
