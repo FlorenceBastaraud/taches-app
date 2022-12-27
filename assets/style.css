@@ -1,11 +1,16 @@
+*, *::before, *::after {
+  caret-color: transparent;
+  box-sizing: inherit;
+}
+
 body {
+  margin: 0;
+  padding: 0;
   background: #FFAFBD;
   background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);
   background: linear-gradient(to right, #ffc3a0, #FFAFBD);
-}
-
-* {
-  caret-color: transparent;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 input {
@@ -126,4 +131,29 @@ main {
   justify-content: space-around;
   width: 20%;
   padding: 10px 20px;
+}
+
+
+@media all and (max-width: 750px) {
+  body {
+    width: 100%;
+  }
+  main, header {
+    width: 80%;
+    max-width: 80%;
+    min-width: unset;
+  }
+  #new-todo-section {
+    width: 80%;
+    text-align: left;
+  }
+  header {
+    margin: 0 auto;
+  }
+  header h1 {
+    margin: 50px auto;
+    width: 100%;
+    font-size: 1.2em;
+    white-space: nowrap;
+  }
 }
