@@ -159,4 +159,10 @@ main {
   .fa-trash {
     margin-left: 0.6em;
   }
+
+  .todo-item .todo-content .todo-text {
+    flex: 1;
+    width: 50%;
+    margin: 0 0 0 0;
+  }
 }
